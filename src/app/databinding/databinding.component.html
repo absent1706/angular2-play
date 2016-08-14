@@ -1,0 +1,15 @@
+<p>
+  databinding works!
+  <input type="text" [value]="title"/>
+  {{ title }}
+</p>
+<input type="checkbox" (click)="toggleError()">
+<div [ngClass]="{redBorder: hasError()}">fff</div>
+
+<h3>Custom prop bind</h3>
+<app-property-binding [id]="1" (clickedCallback)="clickChild($event)"></app-property-binding>
+<app-property-binding [id]="2" (clickedCallback)="clickChild($event)"></app-property-binding>
+
+<h3>two way</h3>
+<input type="text" [(ngModel)]="person.name">
+{{person.name}}
